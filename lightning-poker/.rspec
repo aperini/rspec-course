@@ -1,0 +1,4 @@
+# commons flags so that we can run the rspec cli with no args
+--color
+--require ./spec/spec_helper.rb
+--format doc
