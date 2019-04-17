@@ -1,4 +1,4 @@
-# A plying card of the game
+# A playing card of the game
 class Card
   # e.g. spades, hearts
   attr_reader :suit
@@ -9,7 +9,7 @@ class Card
     new(suit: suit, rank: rank)
   end
 
-  # refactored to hide the new method
+  # refactored to hide the 'new' method
   private_class_method :new
 
   def initialize(suit:, rank:)
@@ -18,8 +18,13 @@ class Card
             when :jack then 11
             when :queen then 12
             when :king then 13
+            when :ace then 14
             else rank
             end
+  end
+
+  def inspect
+    "<Card #{rank} #{suit}>"
   end
 
   def ==(other)
